@@ -1,4 +1,10 @@
-all: executive-engine-control.png logging-display.png alarm-system.png rpm-torque-control-loop.png
+ALL=executive-engine-control.png\
+    logging-display.png\
+    alarm-system.png\
+    rpm-torque-control-loop.png\
+    system-design.png
+
+all: $(ALL)
 
 %.png: %.dia
 	dia $^ -e $@
