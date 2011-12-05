@@ -1,0 +1,5 @@
+This folder will contain all the random files that latex
+generates. You can pretty much ignore them.
+
+The Makfile moves the pdf and dvi files back into the main
+directory.
