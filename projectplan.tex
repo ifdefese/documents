@@ -36,5 +36,29 @@ commits.
 
 \end{subsection}
 
+\begin{subsection}{Code Review}
+
+The Code Review system employed will be Gerrit. Gerrit integrates well with
+Git, and enforces all changes being pushed to be checked first by other team
+members before the changes are applied to the central repository. Reviewers can
+make comments on the commits in their entirety, or on specific lines in
+specific files which have changes. It also allows commits to be modified and
+updated before being applied, if reviewers decide this is necessary. \\
+
+The general code review workflow will be as follows:\\
+
+\begin{itemize}
+\item A central Gerrit server will host all Git repositories
+\item Developers "push" their changes to a review branch
+\item Gerrit creates code review tickets for each commit
+\item Developer selects some reviewers
+\item Reviewers make comments on code
+\item Developer re-factors code if necessary, and pushes again
+\item Reviewers approve changes
+\item Code is merged into main repository
+\end{itemize}
+
+\end{subsection}
+
 \end{section}
 \end{document}
