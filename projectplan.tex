@@ -3,5 +3,38 @@
 
 \begin{section}{Source-code Management}
 
+As this is going to be a largely software-based project, there must be some
+underlying mechanism for collaboration on developing the source code. The most
+common method of collaboration is through the use of version control software.
+In addition to this, a code review system will be used to ensure all code
+submissions are checked for quality.
+
+\begin{subsection}{Version Control}
+
+The version control system employed will be Git. Git is widely used in
+open-source, and was originally designed for the development of the Linux
+kernel. It allows developers to have their own local copy of the source code,
+complete with the benefits of version control. Developers edit the local copy
+of the code, and then "commit" the changes, which creates a "commit record"
+detailing what changed and officially saving it into the repository. At a later
+date, users can then "push" these changes to another repository, or pull
+changes from repositories. This will cause missing commit records to be
+synchronised between the repositories and will update the files which have
+changes. \\
+
+The general workflow for version contro will be as follows:\\
+
+\begin{itemize}
+\item A central repository will exist on a server, which will hold the latest state of all source code
+\item Developers will "clone" this repository and commit changes to it
+\item Developers can then "re-base" changes to merge any commits that would be
+better represented as a single change, or remove unnecessary changes from
+commits.
+\item Developers use "push" to send their changes to the central repository
+\item Developers use "pull" to get changes from the central repository
+\end{itemize}
+
+\end{subsection}
+
 \end{section}
 \end{document}
