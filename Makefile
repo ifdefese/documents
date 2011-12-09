@@ -7,6 +7,9 @@ all: $(ALL)
 projectplan.pdf: projectplan.tex
 design.pdf: design.tex
 
+diagrams/%.png: diagrams/%.dia
+	make -C diagrams
+
 %.pdf: %.tex
 	$(LATEX_VARS) pdflatex $(LATEX_FLAGS) $<
 	touch texout/$@
