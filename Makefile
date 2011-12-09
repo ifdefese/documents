@@ -7,7 +7,7 @@ all: $(ALL)
 projectplan.pdf: projectplan.tex
 design.pdf: design.tex
 
-diagrams/%.png: diagrams/%.dia
+diagrams/%.pdf: diagrams/%.pdf
 	make -C diagrams
 
 %.pdf: %.tex

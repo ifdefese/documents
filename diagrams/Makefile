@@ -1,10 +1,16 @@
-ALL=executive-engine-control.png\
-    logging-display.png\
-    alarm-system.png\
-    rpm-torque-control-loop.png\
-    system-design.png
+ALL=executive-engine-control.pdf\
+    logging-display.pdf\
+    alarm-system.pdf\
+    rpm-torque-control-loop.pdf\
+    system-design.pdf
 
 all: $(ALL)
+
+%.pdf: %.eps
+	epstopdf $^
+
+%.eps: %.dia
+	dia $^ -e $@
 
 %.png: %.dia
 	dia $^ -e $@
