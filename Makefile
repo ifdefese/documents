@@ -4,7 +4,7 @@ LATEX_FLAGS=-output-directory=texout
 
 all: $(ALL)
 
-projectplan.pdf: projectplan.tex
+projectplan.pdf: projectplan.tex diagrams/system-design.pdf
 design.pdf: design.tex
 
 diagrams/%.pdf: diagrams/%.pdf
